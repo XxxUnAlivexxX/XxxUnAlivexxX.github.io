@@ -19,15 +19,13 @@
     }
 
     #switch-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
       display: flex;
+      flex-direction: column;
       align-items: center;
     }
 
     #switch-label {
-      margin-right: 5px;
+      margin-bottom: 10px;
     }
 
     #mode-switch {
@@ -94,17 +92,17 @@
     <input type="checkbox" id="switch-checkbox" checked>
     <div id="slider"></div>
   </div>
+  <a href="#" id="play-video-link">Play me</a>
 </div>
 
 <div id="popup">
   <p>Hey, don't turn it off yet!</p>
-  <a href="#" id="play-video">Play me</a>
 </div>
 
 <script>
   const switchCheckbox = document.getElementById('switch-checkbox');
   const popup = document.getElementById('popup');
-  const playVideoLink = document.getElementById('play-video');
+  const playVideoLink = document.getElementById('play-video-link');
 
   switchCheckbox.addEventListener('change', function() {
     if (!this.checked) {
